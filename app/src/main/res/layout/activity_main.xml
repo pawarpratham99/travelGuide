@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@android:color/white">
+
+    <!-- Hero Image -->
+    <ImageView
+        android:id="@+id/heroImage"
+        android:layout_width="401dp"
+        android:layout_height="303dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/nilhadri"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_circle_white"
+        android:src="@drawable/ic_arrow_back"
+        android:contentDescription="Back"
+        app:layout_constraintTop_toTopOf="@id/heroImage"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"/>
+
+    <!-- Bookmark Button -->
+    <ImageButton
+        android:id="@+id/bookmarkBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_circle_white"
+        android:src="@drawable/ic_bookmark"
+        android:contentDescription="Bookmark"
+        app:layout_constraintTop_toTopOf="@id/heroImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"/>
+
+    <!-- White Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/detailCard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="-30dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toBottomOf="@id/heroImage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="502dp"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Title & Avatar -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/destinationTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Niladri Reservoir"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/destinationLocation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tekergat, Sunamganj"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/avatar"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_circle_white"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/sample_avatar" />
+                </LinearLayout>
+
+                <!-- Rating + Price -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⭐ 4.7 (2498)  "
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$59/Person"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Horizontal Icons -->
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginEnd="8dp"
+                            android:src="@drawable/ic_bus" />
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginEnd="8dp"
+                            android:src="@drawable/ic_plane" />
+
+                        <ImageView
+                            android:layout_width="54dp"
+                            android:layout_height="50dp"
+                            android:layout_marginEnd="8dp"
+                            android:src="@drawable/ic_hotel" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <!-- About com.example.travelapp.Destination -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="About Destination"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Book Now Button -->
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="You will get a complete travel package including hotels, flights, and more. Read More..."
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/bookNowBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="@android:color/holo_blue_dark"
+                    android:text="Book Now"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

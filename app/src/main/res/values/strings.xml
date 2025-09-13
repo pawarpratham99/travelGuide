@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Travel App</string>
+    <string name="home">Home</string>
+    <string name="explore">Explore</string>
+    <string name="saved">Saved</string>
+    <string name="profile">Profile</string>
+    <string name="search_hint">Search destinations</string>
+    <string name="popular_destinations">Popular Destinations</string>
+    <string name="recommended_for_you">Recommended For You</string>
+    <string name="special_offers">Special Offers</string>
+    <string name="see_all">See All</string>
+    <string name="paris">Paris</string>
+    <string name="france">France</string>
+    <string name="bali">Bali</string>
+    <string name="indonesia">Indonesia</string>
+    <string name="rome">Rome</string>
+    <string name="italy">Italy</string>
+    <string name="tokyo">Tokyo</string>
+    <string name="japan">Japan</string>
+    <string name="new_york">New York</string>
+    <string name="usa">USA</string>
+    <string name="barcelona">Barcelona</string>
+    <string name="spain">Spain</string>
+    <string name="rating">4.8</string>
+    <string name="price">$1200</string>
+    <string name="days">7 days</string>
+</resources>
