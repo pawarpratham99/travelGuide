@@ -18,7 +18,7 @@
             android:layout_height="match_parent"
             android:contentDescription="Destination image"
             android:scaleType="centerCrop"
-            tools:src="@drawable/Taj_Mahal" />
+            tools:src="@drawable/tajmahal" />
 
         <View
             android:layout_width="match_parent"
